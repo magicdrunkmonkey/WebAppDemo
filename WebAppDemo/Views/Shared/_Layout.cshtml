@@ -18,10 +18,11 @@
             <!--Navigation menu-->
             <h2>Navigation menu</h2>
             <div class="navbar-header">
-                <ul>
-                    <li>About    <a href>Link 1</a></li>
-                    <li>Contact  <a href>Link 2</a></li>
-                    <li>Projects <a href>Link 3</a></li>
+                <ul>                    
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Projects", "Projects", "Home")</li>
                 </ul>               
             </div>
         </header>
