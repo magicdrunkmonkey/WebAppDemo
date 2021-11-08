@@ -35,6 +35,11 @@ namespace WebAppDemo
             {
                 endpoints.MapControllerRoute(
                     name: "default",
+                    pattern: "{controller=Doctor}/{action=FeverCheck}/{id?}"
+                );
+
+                endpoints.MapControllerRoute(
+                    name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}"
                 );
 
