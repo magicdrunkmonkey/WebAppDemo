@@ -6,23 +6,34 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-    <!--Page Logo and navigation menu-->
-    <container>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+    </head>
+    <body>
+        <header>
+            <!--Page Logo-->
+            <img src="@Url.Content("/Images/small-flower-icon-6.jpg")">
 
-    </container>
-</head>
-<body>
-    
-    <div>
-        @RenderBody()
-    </div>
-</body>
-<footer>
-
-    <!-- Date and my name-->
-    <p>  @DateTime.Now.Year - George Sydby  </p>
-</footer>
+            <!--Navigation menu-->
+            <h2>Navigation menu</h2>
+            <div class="navbar-header">
+                <ul>
+                    <li>Växter       <a href>Link 1</a></li>
+                    <li>Plantering   <a href>Link 2</a></li>
+                    <li>Kompostering <a href>Link 3</a></li>
+                </ul>               
+            </div>
+        </header>
+        <main>
+            <!--Kanske är den container man talar om i uppgiften-->
+            <div>
+                @RenderBody()
+            </div>
+        </main>
+        <footer>
+            <!-- Date and my name-->
+            <p>  @DateTime.Now.Year - George Sydby  </p>
+        </footer>
+    </body>
 </html>
