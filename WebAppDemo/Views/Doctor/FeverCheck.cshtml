@@ -8,9 +8,39 @@
 <h1>Fever Check</h1>
 
 <p>
-    <form action="/action_page.php">
+
+
+
+    <!--FUNKAR INTE HELLER
+    <form action="demo_simpleform.asp" method="post">
+        Your name: <input type="text" name="fname" size="20" />
+        <input type="submit" value="Submit" />
+    </form>
+    <%
+    dim fname
+    fname=Request.Form("fname")
+    If fname<>"" Then
+    Response.Write("Hello " & fname & "!<br>")
+    Response.Write("How are you today?")
+    End If
+    %>-->
+
+    <!--FUNKAR INTE
+        <form action="/action_page.php">
         <label for="feverInput">Fever Check:</label><br>
-        <input type="text" id="feverInput" name="feverInput" value="Enter temperature"><br>        
+        <input type="text" id="feverInput" name="feverInput" value="Enter temperature"><br>
+        <input type="submit" value="Submit">
+    </form>-->
+    <!-- FUNKAR INTE
+    <form method="get" action="simpleform.asp">
+        Temperature: <input type="number" name="temperature"><br><br>
         <input type="submit" value="Submit">
     </form>
+    if (temperature > 37)
+    {
+        <%
+        response.write(request.querystring("fname"))
+        response.write(" " & request.querystring("lname"))
+        %>
+        }-->
 </p>
