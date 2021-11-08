@@ -14,6 +14,15 @@ namespace WebAppDemo.Controllers
         }
         public IActionResult FeverCheck()
         {
+            /*
+            double input = 0;
+            string answer = "";
+            if(input > 37.5)
+            {
+                answer = "You have a fever";
+            }
+            
+            return View(answer);*/
             return View();
         }
     }
