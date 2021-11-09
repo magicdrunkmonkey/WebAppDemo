@@ -25,5 +25,10 @@ namespace WebAppDemo.Controllers
             return View(answer);*/
             return View();
         }
+
+        public IActionResult FeverTemperatureCheck()
+        {
+            return View();
+        }
     }
 }
