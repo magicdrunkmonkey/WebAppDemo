@@ -7,24 +7,23 @@
 
 <h1>Fever Check</h1>
 
+<form method="post" enctype="multipart/form-data" asp-controller="Doctor" asp-action="FeverCheck">
+    <table>            
+        <tr>
+            <td>Enter temperature: </td>
+            <td><input type="number" id="feverChecking" name="temperature" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+    <hr />
+    @ViewBag.Name
+</form>
 
-    <form method="post" enctype="multipart/form-data" asp-controller="Doctor" asp-action="FeverCheck">
-        <table>            
-            <tr>
-                <td>Enter temperature: </td>
-                <td><input type="number" id="feverChecking" name="temperature" /></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Submit" /></td>
-            </tr>
-        </table>
-        <hr />
-        @ViewBag.Name
-    </form>
-
-    <p>
-        <!--FUNKAR INTE HELLER
+<p>
+    <!--FUNKAR INTE HELLER
     <form action="demo_simpleform.asp" method="post">
         Your name: <input type="text" name="fname" size="20" />
         <input type="submit" value="Submit" />
@@ -57,4 +56,4 @@
         response.write(" " & request.querystring("lname"))
         %>
         }-->
-    </p>
+</p>
