@@ -33,8 +33,7 @@ namespace WebAppDemo.Controllers
                 ViewBag.message = answer;
             } 
             //return View(answer);*/
-
-            return View();
+            
         }
         [HttpPost]
         public IActionResult FeverCheck(double temperature)
