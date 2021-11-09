@@ -36,13 +36,10 @@ namespace WebAppDemo.Controllers
         }
         [HttpPost]
         public IActionResult FeverCheck(double temperature)
-        {            
+        { 
+            string answer = DoctorModel.Temperature(temperature);   
 
-            string answer = Temperature(temperature);
-            
-            Te
-
-            ViewBag.message(answer);
+            ViewBag.name = answer;
 
             return View();
 
