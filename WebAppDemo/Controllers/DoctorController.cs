@@ -36,7 +36,7 @@ namespace WebAppDemo.Controllers
         [HttpPost]
         public IActionResult FeverCheck(double temperature)
         {
-            string answer = "";            
+            string answer;            
 
             if (temperature <5 )
             {

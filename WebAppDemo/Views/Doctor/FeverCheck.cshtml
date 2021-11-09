@@ -7,7 +7,7 @@
 
 <h1>Fever Check</h1>
 
-<p>
+
     <form method="post" enctype="multipart/form-data" asp-controller="Doctor" asp-action="FeverCheck">
         <table>            
             <tr>
@@ -23,8 +23,8 @@
         @ViewBag.Name
     </form>
 
-
-    <!--FUNKAR INTE HELLER
+    <p>
+        <!--FUNKAR INTE HELLER
     <form action="demo_simpleform.asp" method="post">
         Your name: <input type="text" name="fname" size="20" />
         <input type="submit" value="Submit" />
@@ -37,7 +37,7 @@
     Response.Write("How are you today?")
     End If
     %>-->
-    <!--FUNKAR INTE
+        <!--FUNKAR INTE
     <form>
         <label for="feverInput">Enter temperature:</label><br>
         <input for="feverInput" type="number" id="feverInput" name=%{TempData["Data1"] = ViewBag.Data1;}><br>
@@ -45,7 +45,7 @@
     </form>
 
     <div>%ViewBag.message</div>-->
-    <!-- FUNKAR INTE
+        <!-- FUNKAR INTE
     <form method="get" action="simpleform.asp">
         Temperature: <input type="number" name="temperature"><br><br>
         <input type="submit" value="Submit">
@@ -57,4 +57,4 @@
         response.write(" " & request.querystring("lname"))
         %>
         }-->
-</p>
+    </p>
