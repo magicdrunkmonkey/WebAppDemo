@@ -32,22 +32,22 @@ namespace WebAppDemo
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Doctor}/{action=FeverCheck}/{id?}"
-                );
-
+            {               
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}"
                 );
 
+                endpoints.MapControllerRoute(
+                   name: "fever",
+                   pattern: "{controller=Doctor}/{action=FeverCheck}/{id?}"
+               );
+
                 /* Så som det stod innan ändring till MapControllerRoute()
                 endpoints.MapGet("/", async context =>
                 {
                     await context.Response.WriteAsync("Hello World!");
-                });*/ 
+                });*/
             });
         }
     }

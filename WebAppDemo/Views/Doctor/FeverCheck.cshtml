@@ -9,6 +9,8 @@
 
 <p>
 
+
+
     <!--FUNKAR INTE HELLER
     <form action="demo_simpleform.asp" method="post">
         Your name: <input type="text" name="fname" size="20" />
@@ -23,14 +25,15 @@
     End If
     %>-->
 
-    <!--FUNKAR INTE-->
+    <!--FUNKAR INTE
     <form>
         <label for="feverInput">Enter temperature:</label><br>
         <input for="feverInput" type="number" id="feverInput" name=@{TempData["Data1"] = ViewBag.Data1;}><br>
         <input type="submit" value="Submit">
     </form>
 
-    <div>@ViewBag.message</div>
+    <div>%ViewBag.message</div>-->
+
     <!-- FUNKAR INTE
     <form method="get" action="simpleform.asp">
         Temperature: <input type="number" name="temperature"><br><br>
