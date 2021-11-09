@@ -14,7 +14,7 @@ namespace WebAppDemo.Controllers
         }
         public IActionResult FeverCheck()
         {
-            /* FUNKAR INTE 
+            /* FUNKAR INTE */
             int x = Convert.ToInt32(TempData["Data1"]);
             
             //double input = 0;
@@ -22,12 +22,14 @@ namespace WebAppDemo.Controllers
             if(x > 37.5)
             {
                 answer = "You have a fever";
+                ViewBag.message = answer;
             }
             else
             {
                 answer = "You have no fever";
+                ViewBag.message = answer;
             }
-            ViewBag.message("answer");*/
+            
 
             //return View(answer);
             return View();
