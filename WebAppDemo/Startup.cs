@@ -38,10 +38,16 @@ namespace WebAppDemo
                     pattern: "{controller=Home}/{action=Index}/{id?}"
                 );
 
-                endpoints.MapControllerRoute(
+               endpoints.MapControllerRoute(
                    name: "fever",
                    pattern: "{controller=Doctor}/{action=FeverCheck}/{id?}"
                );
+
+               /* FUNGERAR INTE
+                endpoints.MapControllerRoute(
+                   name: "guessingGame",
+                   pattern: "{controller=?}/{action=FeverCheck}/{id?}"
+               );*/
 
                 /* Så som det stod innan ändring till MapControllerRoute()
                 endpoints.MapGet("/", async context =>

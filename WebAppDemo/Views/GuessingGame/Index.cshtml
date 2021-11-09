@@ -4,3 +4,19 @@
 @{
     ViewData["Title"] = "GuessingGame";
 }
+<h1>Index Guessing Game</h1>
+
+<form method="post" enctype="multipart/form-data" asp-controller="GuessingGame" asp-action="index">
+    <table>
+        <tr>
+            <td>Enter temperature: </td>
+            <td><input type="number" id="feverChecking" name="temperature" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+    <hr />
+    @ViewBag.Name
+</form>

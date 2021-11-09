@@ -14,6 +14,8 @@ namespace WebAppDemo.Controllers
         }
         public IActionResult FeverCheck()
         {
+            return View();
+
             /* FUNKAR INTE 
             int x = Convert.ToInt32(TempData["Data1"]);
             
@@ -30,8 +32,6 @@ namespace WebAppDemo.Controllers
                 ViewBag.message = answer;
             } 
             //return View(answer);*/
-
-            return View();
         }
         [HttpPost]
         public IActionResult FeverCheck(double temperature)
