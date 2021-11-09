@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebAppDemo.Models;
 
 namespace WebAppDemo.Controllers
 {
@@ -13,9 +14,9 @@ namespace WebAppDemo.Controllers
             return View();
         }
         public IActionResult FeverCheck()
-        {
+        {            
             return View();
-
+            
             /* FUNKAR INTE 
             int x = Convert.ToInt32(TempData["Data1"]);
             
@@ -32,10 +33,19 @@ namespace WebAppDemo.Controllers
                 ViewBag.message = answer;
             } 
             //return View(answer);*/
+
+            return View();
         }
         [HttpPost]
         public IActionResult FeverCheck(double temperature)
-        {
+        { 
+            string answer = DoctorModel.Temperature(temperature);   
+
+            ViewBag.name = answer;
+
+            return View();
+
+            /* FELAKTIG LÖSNING - FLYTTAD TILL DoctorModel
             string answer;            
 
             if (temperature <5 )
@@ -59,9 +69,7 @@ namespace WebAppDemo.Controllers
                 answer = "This is not a valid input!";
             }
 
-            ViewBag.name = string.Format(answer);
-
-            return View();
+            ViewBag.name = string.Format(answer);*/            
         }
 
             /*  FUNKAR INTE
