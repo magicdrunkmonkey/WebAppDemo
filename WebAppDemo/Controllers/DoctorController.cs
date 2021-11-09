@@ -14,7 +14,7 @@ namespace WebAppDemo.Controllers
         }
         public IActionResult FeverCheck()
         {
-            /* FUNKAR INTE */
+            /* FUNKAR INTE 
             int x = Convert.ToInt32(TempData["Data1"]);
             
             //double input = 0;
@@ -28,32 +28,62 @@ namespace WebAppDemo.Controllers
             {
                 answer = "You have no fever";
                 ViewBag.message = answer;
-            }
-            
+            } 
+            //return View(answer);*/
 
-            //return View(answer);
             return View();
         }
-        /*
-        public IActionResult FeverTemperatureCheck()
+        [HttpPost]
+        public IActionResult FeverCheck(double temperature)
         {
-            /* SEPARAT IACTION FUNKAR INTE
-            int x = Convert.ToInt32(TempData["Data1"]);
+            string answer = "";            
 
-            double input = 0;
-            string answer = "";
-            if (x > 37.5)
+            if (temperature <5 )
+            {
+                answer = "";
+            }
+            else if (temperature > 37)
             {
                 answer = "You have a fever";
             }
-            else
+            else if (temperature == 37)
             {
                 answer = "You have no fever";
             }
+            else if (temperature < 37)
+            {
+                answer = "You have hypothermia";
+            }
+            else
+            {
+                answer = "This is not a valid input!";
+            }
 
-            ViewBag.message(answer);
+            ViewBag.name = string.Format(answer);
 
             return View();
-        }*/
-    }
+        }
+
+            /*  FUNKAR INTE
+            public IActionResult FeverTemperatureCheck()
+            {
+                /* SEPARAT IACTION FUNKAR INTE
+                int x = Convert.ToInt32(TempData["Data1"]);
+
+                double input = 0;
+                string answer = "";
+                if (x > 37.5)
+                {
+                    answer = "You have a fever";
+                }
+                else
+                {
+                    answer = "You have no fever";
+                }
+
+                ViewBag.message(answer);
+
+                return View();
+            }*/
+        }
 }

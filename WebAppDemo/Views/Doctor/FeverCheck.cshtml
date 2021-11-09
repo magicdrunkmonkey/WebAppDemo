@@ -8,7 +8,20 @@
 <h1>Fever Check</h1>
 
 <p>
-
+    <form method="post" enctype="multipart/form-data" asp-controller="Doctor" asp-action="FeverCheck">
+        <table>            
+            <tr>
+                <td>Enter temperature: </td>
+                <td><input type="number" id="feverChecking" name="temperature" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+        <hr />
+        @ViewBag.Name
+    </form>
 
 
     <!--FUNKAR INTE HELLER
@@ -24,7 +37,6 @@
     Response.Write("How are you today?")
     End If
     %>-->
-
     <!--FUNKAR INTE
     <form>
         <label for="feverInput">Enter temperature:</label><br>
@@ -33,7 +45,6 @@
     </form>
 
     <div>%ViewBag.message</div>-->
-
     <!-- FUNKAR INTE
     <form method="get" action="simpleform.asp">
         Temperature: <input type="number" name="temperature"><br><br>
