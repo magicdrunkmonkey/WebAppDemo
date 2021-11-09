@@ -14,21 +14,44 @@ namespace WebAppDemo.Controllers
         }
         public IActionResult FeverCheck()
         {
-            /*
-            double input = 0;
-            string answer = "";
-            if(input > 37.5)
+            /* FUNKAR INTE 
+            int x = Convert.ToInt32(TempData["Data1"]);
+            
+            //double input = 0;
+            string answer = "test";
+            if(x > 37.5)
             {
                 answer = "You have a fever";
             }
-            
-            return View(answer);*/
+            else
+            {
+                answer = "You have no fever";
+            }
+            ViewBag.message("answer");*/
+
+            //return View(answer);
             return View();
         }
-
+        /*
         public IActionResult FeverTemperatureCheck()
         {
+            /* SEPARAT IACTION FUNKAR INTE
+            int x = Convert.ToInt32(TempData["Data1"]);
+
+            double input = 0;
+            string answer = "";
+            if (x > 37.5)
+            {
+                answer = "You have a fever";
+            }
+            else
+            {
+                answer = "You have no fever";
+            }
+
+            ViewBag.message(answer);
+
             return View();
-        }
+        }*/
     }
 }
