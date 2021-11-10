@@ -34,9 +34,9 @@ namespace WebAppDemo.Controllers
 
             int secretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");
 
-            string result = guessingGameModel.CheckGuessedNumber(guessedNumber, secretNumber);
+            string result = guessingGameModel.CheckGuessedNumber(guessedNumber, secretNumber);       //Variabel för if-satsens villkor
 
-            ViewBag.guessResult = guessingGameModel.CheckGuessedNumber(guessedNumber, secretNumber);
+            ViewBag.guessResult = guessingGameModel.CheckGuessedNumber(guessedNumber, secretNumber); 
 
             if ( result == "Correct guessed, you won! Play a new Game?")
             {
