@@ -17,6 +17,15 @@ namespace WebAppDemo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(5);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -30,6 +39,8 @@ namespace WebAppDemo
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
@@ -48,12 +59,7 @@ namespace WebAppDemo
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}"                    
-                );                
-
-                /*endpoints.MapControllerRoute(
-                   name: "fever",
-                   pattern: "{controller=Doctor}/{action=FeverCheck}/{id?}"
-               );
+                ); 
 
                 /* Så som det stod innan ändring till MapControllerRoute()
                 endpoints.MapGet("/", async context =>
