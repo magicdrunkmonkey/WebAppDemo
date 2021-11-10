@@ -37,7 +37,13 @@ namespace WebAppDemo
                    name: "fever",
                    pattern: "FeverCheck",
                    defaults: new { controller = "Doctor" , action = "FeverCheck" }
-               );
+                );
+
+                endpoints.MapControllerRoute(   
+                   name: "game",
+                   pattern: "GuessingGame",
+                   defaults: new { controller = "GuessingGame", action = "GuessNumber" }
+                );
 
                 endpoints.MapControllerRoute(
                     name: "default",
