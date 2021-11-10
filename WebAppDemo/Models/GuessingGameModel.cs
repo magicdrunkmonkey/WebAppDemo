@@ -32,7 +32,7 @@ namespace WebAppDemo.Models
                 answer = "The guess is to high";
             }else if(guessNumber == secretNumber)
             {
-                answer = "Correct guessed, you won!";
+                answer = "Correct guessed, you won! Play a new Game?";                
             }
 
             return answer;
