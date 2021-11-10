@@ -11,21 +11,23 @@
         <title>@ViewBag.Title</title>
     </head>
     <body>
-        <header>
+        <header style="display:flex">            
             <!--Page Logo-->
             <img src="@Url.Content("/Images/small-flower-icon-6.jpg")">
 
-            <!--Navigation menu-->
-            <h2>Navigation menu</h2>
-            <div class="navbar-header">
-                <ul>
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Projects", "Projects", "Home")</li>
-                    <li>@Html.ActionLink("Fever Check", "FeverCheck", "Doctor")</li>
-                    <li>@Html.ActionLink("Guessing Game", "GuessNumber", "GuessingGame")</li>
-                </ul>               
+            <div>
+                <!--Navigation menu-->
+                <h2>Navigation menu</h2>
+                <div class="navbar-header">
+                    <ul>
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Projects", "Projects", "Home")</li>
+                        <li>@Html.ActionLink("Fever Check", "FeverCheck", "Doctor")</li>
+                        <li>@Html.ActionLink("Guessing Game", "GuessNumber", "GuessingGame")</li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main>
