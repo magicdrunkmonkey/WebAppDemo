@@ -7,8 +7,13 @@
 
 <h1>Guess the number</h1>
 
+<h3>Generated Random number (underlätta kollen)</h3>
+<p>@ViewBag.test</p>
+
+<h3>Guess Result</h3>
+<p>@ViewBag.guessResult</p>
 <form asp-controller="GuessingGame" asp-action="GuessNumber" method="post">
-    <label>Guess a number:</label>
+    <label>Guess a number between 1 and 100:</label>
     <input type="number" name="guessedNumber" />
     <input type="submit" value="Enter guess" />
 </form>

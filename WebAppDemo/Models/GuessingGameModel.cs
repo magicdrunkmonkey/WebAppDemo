@@ -7,20 +7,33 @@ namespace WebAppDemo.Models
 {   
     public class GuessingGameModel
     {
+                
+        //Getter, Setter och annat
         public int GuessedNumber { get; set; }
-
-        Random randomNumber = new Random();
+        public int RandomNumber { get; set; }  
 
         public int GenerateRandomNumber()
         {
-            int rndNumber = 0;
-
-            return rndNumber;
+            Random randomNumber = new Random();
+            int rnd = randomNumber.Next(1, 101);
+            return rnd;
         }
 
-        public string CheckGuessedNumber(int number)
+        public string CheckGuessedNumber(int guessNumber, int secretNumber)
         {
             string answer ="";
+
+            if (guessNumber < secretNumber)
+            {
+                answer = "The guess is to low";
+            }
+            else if(guessNumber > secretNumber)
+            {
+                answer = "The guess is to high";
+            }else if(guessNumber == secretNumber)
+            {
+                answer = "Correct guessed, you won!";
+            }
 
             return answer;
         }
