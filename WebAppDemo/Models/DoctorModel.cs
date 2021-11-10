@@ -7,7 +7,10 @@ namespace WebAppDemo.Models
 {
     public class DoctorModel
     {
-        public static string Temperature(double temp)
+        public string Result { get; set; }
+        public int Temperature { get; set; }
+        
+        public static string CheckTemperature(double temp)
         {
             string answer;
 

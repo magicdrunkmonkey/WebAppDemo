@@ -15,81 +15,18 @@ namespace WebAppDemo.Controllers
         }
         public IActionResult FeverCheck()
         {            
-            return View();
-            
-            /* FUNKAR INTE 
-            int x = Convert.ToInt32(TempData["Data1"]);
-            
-            //double input = 0;
-            string answer = "test";
-            if(x > 37.5)
-            {
-                answer = "You have a fever";
-                ViewBag.message = answer;
-            }
-            else
-            {
-                answer = "You have no fever";
-                ViewBag.message = answer;
-            } 
-            //return View(answer);*/            
+            return View();        
         }
         [HttpPost]
         public IActionResult FeverCheck(double temperature)
-        { 
-            string answer = DoctorModel.Temperature(temperature);   
+        {
+            ViewBag.name = DoctorModel.CheckTemperature(temperature);
 
-            ViewBag.name = answer;
+            /*
+            string answer = DoctorModel.CheckTemperature(temperature);   
+            ViewBag.name = answer;*/
 
-            return View();
-
-            /* FELAKTIG LÖSNING - FLYTTAD TILL DoctorModel
-            string answer;            
-
-            if (temperature <5 )
-            {
-                answer = "";
-            }
-            else if (temperature > 37)
-            {
-                answer = "You have a fever";
-            }
-            else if (temperature == 37)
-            {
-                answer = "You have no fever";
-            }
-            else if (temperature < 37)
-            {
-                answer = "You have hypothermia";
-            }
-            else
-            {
-                answer = "This is not a valid input!";
-            }
-
-            ViewBag.name = string.Format(answer);*/            
-        }
-
-            /*  FUNKAR INTE
-            public IActionResult FeverTemperatureCheck()
-            {
-                /* SEPARAT IACTION FUNKAR INTE
-                int x = Convert.ToInt32(TempData["Data1"]);
-
-                double input = 0;
-                string answer = "";
-                if (x > 37.5)
-                {
-                    answer = "You have a fever";
-                }
-                else
-                {
-                    answer = "You have no fever";
-                }
-
-                ViewBag.message(answer);
-
-                return View();
-            }*/
-        }
+            return View();                        
+        }            
+    }
 }
