@@ -22,7 +22,7 @@ namespace WebAppDemo.Controllers
             HttpContext.Session.SetInt32("RandomNumber", guessingGameModel.GenerateRandomNumber());
             
             //Testing Session
-            ViewBag.test = HttpContext.Session.GetInt32("RandomNumber");
+            ViewBag.test = HttpContext.Session.GetInt32("RandomNumber");  //Endast med för att testa inmatningsfältet.
             ViewBag.guessResult = "Good Luck!";
 
             return View();
@@ -38,10 +38,11 @@ namespace WebAppDemo.Controllers
 
             ViewBag.guessResult = guessingGameModel.CheckGuessedNumber(guessedNumber, secretNumber); 
 
-            if ( result == "Correct guessed, you won! Play a new Game?")
+            if ( result == "Correct guessed, you won!")
             {
                 HttpContext.Session.SetInt32("RandomNumber", guessingGameModel.GenerateRandomNumber());
-                secretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");          
+                secretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");
+                ViewBag.newGame = "Make a guess and play again?";
             }
 
             ViewBag.test = secretNumber;            

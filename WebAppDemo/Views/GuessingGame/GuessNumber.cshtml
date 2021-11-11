@@ -14,6 +14,7 @@
 
 <h3>Guess Result</h3>
 <p>@ViewBag.guessResult</p>
+<p>@ViewBag.newGame</p>
 <form asp-controller="GuessingGame" asp-action="GuessNumber" method="post">
     <label>Guess a number between 1 and 100:</label>
     <input type="number" name="guessedNumber" />
