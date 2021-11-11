@@ -75,3 +75,12 @@ img {
     max-width: 25%;
     height: auto;
 }
+
+th.table-header{
+    padding-right: 10px;    
+}
+
+div.GuessNumberCheat {
+    border: dashed;
+    background-color: gray;
+}
