@@ -22,5 +22,13 @@
 <p>@ViewBag.newGame</p>
 @if (ViewBag.countGuess != null || ViewBag.countGuess == 0)
 {
-    <p>You have guessed @ViewBag.countGuess times.</p>
+    @if (ViewBag.countGuess == 1)
+    {
+        <p>You have guessed @ViewBag.countGuess time.</p>
+    }
+    else
+    {
+        <p>You have guessed @ViewBag.countGuess times.</p>
+    }
+    
 }
