@@ -10,7 +10,8 @@ namespace WebAppDemo.Models
                 
         //Getter, Setter och annat
         public int GuessedNumber { get; set; }
-        public int RandomNumber { get; set; }  
+        public int SecretNumber { get; set; }        
+        public string Answer { get; set; }
 
         public int GenerateRandomNumber()
         {
@@ -32,7 +33,8 @@ namespace WebAppDemo.Models
                 answer = "The guess is to high";
             }else if(guessNumber == secretNumber)
             {
-                answer = "Correct guessed, you won!";                
+                answer = "Correct guessed, you won!";
+                Answer = answer;
             }
 
             return answer;

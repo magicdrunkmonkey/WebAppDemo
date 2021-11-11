@@ -33,12 +33,13 @@ namespace WebAppDemo.Controllers
             GuessingGameModel guessingGameModel = new GuessingGameModel();
 
             int secretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");
+            guessingGameModel.SecretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");    //Set SecretNumber in GuessingGameModel
 
             string result = guessingGameModel.CheckGuessedNumber(guessedNumber, secretNumber);       //Variabel för if-satsens villkor
 
             ViewBag.guessResult = guessingGameModel.CheckGuessedNumber(guessedNumber, secretNumber); 
 
-            if ( result == "Correct guessed, you won!")
+            if ( result == guessingGameModel.Answer)
             {
                 HttpContext.Session.SetInt32("RandomNumber", guessingGameModel.GenerateRandomNumber());
                 secretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");
