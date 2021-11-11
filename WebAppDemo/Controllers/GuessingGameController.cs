@@ -39,7 +39,7 @@ namespace WebAppDemo.Controllers
 
             ViewBag.guessResult = result; 
 
-            if ( result == guessingGameModel.Answer)  //Använder sig av "get;" från GuessingGameModel.cs
+            if ( result == guessingGameModel.Answer)  //Använder sig av "get;" från GuessingGameModel.cs, om vinner genererar nytt hemligt nummer.
             {
                 HttpContext.Session.SetInt32("RandomNumber", guessingGameModel.GenerateRandomNumber());
                 secretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");
