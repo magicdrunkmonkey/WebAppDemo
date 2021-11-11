@@ -20,7 +20,8 @@ namespace WebAppDemo.Controllers
             GuessingGameModel guessingGameModel = new GuessingGameModel();            
 
             HttpContext.Session.SetInt32("RandomNumber", guessingGameModel.GenerateRandomNumber());
-            
+            HttpContext.Session.SetInt32("guessCounter", 0);
+
             //Testing Session
             ViewBag.test = HttpContext.Session.GetInt32("RandomNumber");  //Endast med för att testa inmatningsfältet.
             ViewBag.guessResult = "Good Luck!";
@@ -35,15 +36,21 @@ namespace WebAppDemo.Controllers
             int secretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");
             guessingGameModel.SecretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");     //Set SecretNumber in GuessingGameModel
                                                                                                     
-            string result = guessingGameModel.CheckGuessedNumber(guessedNumber, secretNumber);       //Variabel för if-satsens villkor
+            string result = guessingGameModel.CheckGuessedNumber(guessedNumber, secretNumber);       //Variabel för if-satsens villkor                   
 
-            ViewBag.guessResult = result; 
+            int counter = (int)HttpContext.Session.GetInt32("guessCounter");
 
-            if ( result == guessingGameModel.Answer)  //Använder sig av "get;" från GuessingGameModel.cs, om vinner genererar nytt hemligt nummer.
+            ViewBag.guessResult = result;
+            ViewBag.countGuess = ++counter;             //Räknar upp och visar counter
+
+            HttpContext.Session.SetInt32("guessCounter", counter);  //Sparar antalet gissningar
+
+            if ( result == guessingGameModel.Answer)    //Använder sig av "get;" från GuessingGameModel.cs, om vinner genererar nytt hemligt nummer.
             {
                 HttpContext.Session.SetInt32("RandomNumber", guessingGameModel.GenerateRandomNumber());
                 secretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");
                 ViewBag.newGame = "Make a guess and play again?";
+                HttpContext.Session.SetInt32("guessCounter", 0);
             }
 
             ViewBag.test = secretNumber;            

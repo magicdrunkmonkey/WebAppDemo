@@ -12,6 +12,7 @@ namespace WebAppDemo.Models
         public int GuessedNumber { get; set; }
         public int SecretNumber { get; set; }        
         public string Answer { get; set; }
+        public int CountGuess { get; set; }
 
         public int GenerateRandomNumber()
         {
@@ -21,7 +22,7 @@ namespace WebAppDemo.Models
         }
 
         public string CheckGuessedNumber(int guessNumber, int secretNumber)
-        {
+        {            
             string answer ="";
 
             if (guessNumber < secretNumber)
