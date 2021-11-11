@@ -83,4 +83,6 @@ th.table-header{
 div.GuessNumberCheat {
     border: dashed;
     background-color: gray;
+    align-content: center;
+    text-align: center;
 }
