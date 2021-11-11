@@ -7,11 +7,6 @@
 
 <h1>Guess the number</h1>
 
-<div class="GuessNumberCheat">
-    <h3>(underlätta kollen av genererat number)</h3>
-    <p style="color:yellow">@ViewBag.test</p>
-</div>
-
 <h3>Guess Result</h3>
 <p>@ViewBag.guessResult</p>
 <p>@ViewBag.newGame</p>
@@ -20,3 +15,8 @@
     <input type="number" name="guessedNumber" />
     <input type="submit" value="Enter guess" />
 </form>
+<br />
+<div class="GuessNumberCheat">
+    <h3>(Denna rutan är endast för att underlätta kollen av genererat number och inte en del av hemsidan.)</h3>
+    <p style="color:yellow">Hemliga numret är @ViewBag.test</p>
+</div>
