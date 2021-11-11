@@ -37,7 +37,7 @@ namespace WebAppDemo.Controllers
 
             string result = guessingGameModel.CheckGuessedNumber(guessedNumber, secretNumber);       //Variabel för if-satsens villkor
 
-            ViewBag.guessResult = guessingGameModel.CheckGuessedNumber(guessedNumber, secretNumber); 
+            ViewBag.guessResult = result; 
 
             if ( result == guessingGameModel.Answer)
             {
