@@ -30,30 +30,36 @@ namespace WebAppDemo.Controllers
         }
         [HttpPost]
         public IActionResult GuessNumber(int guessedNumber)
-        {
+        {            
+            CookieOptions cookieOptions = new CookieOptions();
+            cookieOptions.Expires = DateTime.Now.AddMinutes(30);
             GuessingGameModel guessingGameModel = new GuessingGameModel();
 
+            //Check the guess
             int secretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");
-            guessingGameModel.SecretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");     //Set SecretNumber in GuessingGameModel
-                                                                                                    
+            guessingGameModel.SecretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");     //Set SecretNumber in GuessingGameModel                                                                                                  
             string result = guessingGameModel.CheckGuessedNumber(guessedNumber, secretNumber);       //Variabel för if-satsens villkor                   
 
+            //Count the guess
             int counter = (int)HttpContext.Session.GetInt32("guessCounter");
 
+            //Show on View()
             ViewBag.guessResult = result;
-            ViewBag.countGuess = ++counter;             //Räknar upp och visar counter
-
+            ViewBag.countGuess = ++counter;                         //Räknar upp och visar counter
             HttpContext.Session.SetInt32("guessCounter", counter);  //Sparar antalet gissningar
-
-            if ( result == guessingGameModel.Answer)    //Använder sig av "get;" från GuessingGameModel.cs, om vinner genererar nytt hemligt nummer.
+            if ( result == guessingGameModel.Answer)                //Använder sig av "get;" från GuessingGameModel.cs, om vinner genererar nytt hemligt nummer.
             {
                 HttpContext.Session.SetInt32("RandomNumber", guessingGameModel.GenerateRandomNumber());
                 secretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");
                 ViewBag.newGame = "Make a guess and play again?";
+
+                //Provar på att göra highscore (Svårt)
+                //Response.Cookies.Append("GuessingGameHighScore", "Game: "+DateTime +" Guessed: " secretNumber, cookieOptions);
                 HttpContext.Session.SetInt32("guessCounter", 0);
             }
-
-            ViewBag.test = secretNumber;            
+            ViewBag.test = secretNumber;  
+            
+            
             
             return View();
         }
