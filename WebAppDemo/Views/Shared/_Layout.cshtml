@@ -14,65 +14,74 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                <div class="container">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img style="padding: 20px" src="@Url.Content("/Images/small-flower-icon-6.jpg")"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Projects">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Doctor" asp-action="FeverCheck">Fever Check</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="GuessingGame" asp-action="GuessNumber">Guessing Game</a>
-                            </li>
-                        </ul>
-                    </div>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img style="padding: 20px" src="@Url.Content("/Images/small-flower-icon-6.jpg")"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Doctor" asp-action="FeverCheck">Fever Check</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="GuessingGame" asp-action="GuessNumber">Guessing Game</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-
-            <!--Page Logo
-    <img style="padding: 20px" src="%Url.Content("/Images/small-flower-icon-6.jpg")">-->
-            <!--Navigation menu
-    <h2>Navigation menu</h2>
-    <div class="navbar-header">
-        <ul>
-            <li>%Html.ActionLink("Home", "Index", "Home")</li>
-            <li>%Html.ActionLink("About", "About", "Home")</li>
-            <li>%Html.ActionLink("Contact", "Contact", "Home")</li>
-            <li>%Html.ActionLink("Projects", "Projects", "Home")</li>
-            <li>%Html.ActionLink("Fever Check", "FeverCheck", "Doctor")</li>
-            <li>%Html.ActionLink("Guessing Game", "GuessNumber", "GuessingGame")</li>
-        </ul>
-    </div>
-            </div>-->
-        </header>
-        <main>
-            <!--Kanske är den container man talar om i uppgiften-->
-            <div>
-                @RenderBody()
             </div>
-        </main>
-        <footer>
-            <!-- Date and my name-->
-            <p>  @DateTime.Now.Year - George Sydby  </p>
-        </footer>
-    </body>
+        </nav>
+
+        <!--Page Logo
+        <img style="padding: 20px" src="%Url.Content("/Images/small-flower-icon-6.jpg")">-->
+        <!--Navigation menu
+        <h2>Navigation menu</h2>
+        <div class="navbar-header">
+            <ul>
+                <li>%Html.ActionLink("Home", "Index", "Home")</li>
+                <li>%Html.ActionLink("About", "About", "Home")</li>
+                <li>%Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li>%Html.ActionLink("Projects", "Projects", "Home")</li>
+                <li>%Html.ActionLink("Fever Check", "FeverCheck", "Doctor")</li>
+                <li>%Html.ActionLink("Guessing Game", "GuessNumber", "GuessingGame")</li>
+            </ul>
+        </div>
+                </div>-->
+    </header>
+    <main>
+        <!--Kanske är den container man talar om i uppgiften-->
+        <div>
+            @RenderBody()
+        </div>
+    </main>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - George Sydby <!--- <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>-->
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+    <!--<footer>-->
+    <!-- Date and my name
+    <p>  %DateTime.Now.Year - George Sydby  </p>
+    </footer>-->
+</body>
 </html>
