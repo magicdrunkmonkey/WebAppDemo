@@ -38,7 +38,7 @@ namespace WebAppDemo.Controllers
             //Check the guess
             int secretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");
             guessingGameModel.SecretNumber = (int)HttpContext.Session.GetInt32("RandomNumber");     //Set SecretNumber in GuessingGameModel                                                                                                  
-            string result = guessingGameModel.CheckGuessedNumber(guessedNumber, secretNumber);       //Variabel för if-satsens villkor                   
+            string result = guessingGameModel.CheckGuessedNumber(guessedNumber, secretNumber);      //Variabel för if-satsens villkor                   
 
             //Count the guess
             int counter = (int)HttpContext.Session.GetInt32("guessCounter");
