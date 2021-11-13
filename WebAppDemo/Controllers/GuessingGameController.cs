@@ -17,10 +17,14 @@ namespace WebAppDemo.Controllers
         }
         public IActionResult GuessNumber()
         {
-            GuessingGameModel guessingGameModel = new GuessingGameModel();            
+            GuessingGameModel guessingGameModel = new GuessingGameModel();
 
+            HttpContext.Session.SetString("DidIWin", "");
+
+            
             HttpContext.Session.SetInt32("RandomNumber", guessingGameModel.GenerateRandomNumber());
             HttpContext.Session.SetInt32("guessCounter", 0);
+
 
             //Testing Session
             ViewBag.test = HttpContext.Session.GetInt32("RandomNumber");  //Endast med för att testa inmatningsfältet.
