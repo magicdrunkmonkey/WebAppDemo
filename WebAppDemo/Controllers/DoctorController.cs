@@ -21,11 +21,6 @@ namespace WebAppDemo.Controllers
         public IActionResult FeverCheck(double temperature)
         {
             ViewBag.name = DoctorModel.CheckTemperature(temperature);
-
-            /*
-            string answer = DoctorModel.CheckTemperature(temperature);   
-            ViewBag.name = answer;*/
-
             return View();                        
         }            
     }

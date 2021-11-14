@@ -36,7 +36,6 @@ namespace WebAppDemo.Models
             }
 
             return answer;
-        }
-        
+        }        
     }
 }
