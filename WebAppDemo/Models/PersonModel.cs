@@ -12,6 +12,7 @@ namespace WebAppDemo.Models
      */
     public class PersonModel
     {
+        public int PersonId { get; set; }
         public string Name { get; set; }
         public int PhoneNumber { get; set; }
         public string City { get; set; }
