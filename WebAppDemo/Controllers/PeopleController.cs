@@ -22,14 +22,9 @@ namespace WebAppDemo.Controllers
         {
             return View();
         }
-        public IActionResult PeopleView()
+        public IActionResult FindPerson()
         {
-            List<PersonModel> people = new List<PersonModel>();
-
-            people.Add(new PersonModel { Name = "George Sydby", PhoneNumber = 0737323814, City = "Göteborg" });
-            people.Add(new PersonModel { Name = "Kalle Anka", PhoneNumber = 0737123456, City = "Ankeborg" });
-
-            return View(people);
+            return View();
         }
     }
 }
