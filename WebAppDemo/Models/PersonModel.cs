@@ -9,6 +9,11 @@ namespace WebAppDemo.Models
      * Create a MVC project with a controller with one view to displays a list of people.
      * These people should have a name, phone number and city
      * public class PersonModel
+     * 
+     * o Person – Person data.
+     * 
+     * • The table data should come from a view model, which should have a list of people, and
+     *   the search phrase if one exists.
      */
     public class PersonModel
     {

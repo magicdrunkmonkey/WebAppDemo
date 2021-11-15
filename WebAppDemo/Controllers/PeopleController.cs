@@ -16,6 +16,7 @@ namespace WebAppDemo.Controllers
             people.Add(new PersonModel { PersonId = 1, Name = "George Sydby", PhoneNumber = 0737323814, City = "Göteborg" });
             people.Add(new PersonModel { PersonId = 2, Name = "Kalle Anka", PhoneNumber = 0737123456, City = "Ankeborg" });
 
+
             return View(people);
         }
         public IActionResult CreatePerson()

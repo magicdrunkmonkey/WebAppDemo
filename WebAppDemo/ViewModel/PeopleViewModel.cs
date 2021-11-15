@@ -9,5 +9,7 @@ namespace WebAppDemo.ViewModel
     public class PeopleViewModel
     {
         public PersonModel ViewPerson { get; set; }
+
+        
     }
 }
