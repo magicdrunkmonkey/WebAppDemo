@@ -6,22 +6,7 @@
 
 
 <h1>People</h1>
-@mode WebAppDemo.PeopleViewModel
-<form asp-controller="People" asp-action="FindPerson" method="post">
-    <label asp-for="Name">Enter search </label>
-    <input asp-for="Name" />
-    <input type="submit" value="Enter search" />
-</form>
 
-<form asp-controller="People" asp-action="CreatePerson" method="post">
-    <label asp-for="Name"> </label>
-    <input asp-for="Name" />
-    <label asp-for="PhoneNumber"> </label>
-    <input asp-for="PhoneNumber" />
-    <label asp-for="City"> </label>
-    <input asp-for="City" />
-    <input type="submit" value="Create Person" />
-</form>
 <!--AUTOGENERERADES MED MALLEN LIST
 <p>
     <a asp-action="Create">Create New</a>
@@ -29,6 +14,9 @@
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonId)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
             </th>
@@ -44,22 +32,25 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PhoneNumber)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.City)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                </td>
-            </tr>
+        <tr>
+            <th>
+                @Html.DisplayFor(modelItem => item.PersonId)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
         }
     </tbody>
 </table>
