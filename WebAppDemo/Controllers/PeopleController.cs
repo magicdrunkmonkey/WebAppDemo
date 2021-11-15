@@ -8,7 +8,7 @@ namespace WebAppDemo.Controllers
 {
     public class PeopleController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index() 
         {
             return View();
         }
