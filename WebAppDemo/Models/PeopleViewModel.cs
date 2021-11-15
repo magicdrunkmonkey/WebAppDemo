@@ -7,5 +7,6 @@ namespace WebAppDemo.Models
 {
     public class PeopleViewModel
     {
+
     }
 }
