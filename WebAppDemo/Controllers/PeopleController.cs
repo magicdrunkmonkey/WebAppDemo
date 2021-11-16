@@ -21,6 +21,18 @@ namespace WebAppDemo.Controllers
 
             return View(people);
         }
+        [HttpPost]
+        public IActionResult People(string name, string city)  //Searach Name or City
+        {
+            
+            return View();
+        }
+        [HttpPost]
+        public IActionResult People(int ID, string name, int phoneNumber, string city)  //Searach Name or City
+        {
+
+            return View();
+        }
         public IActionResult CreatePerson()
         {
             return View();
