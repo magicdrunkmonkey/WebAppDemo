@@ -7,6 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using System.Reflection;
 
 namespace WebAppDemo
 {
@@ -24,6 +26,8 @@ namespace WebAppDemo
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
+
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             services.AddControllersWithViews();
         }

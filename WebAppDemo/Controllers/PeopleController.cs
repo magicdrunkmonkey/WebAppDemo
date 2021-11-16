@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using WebAppDemo.ViewModels;
 namespace WebAppDemo.Controllers
 {
     public class PeopleController : Controller
-    {
+    {        
         public IActionResult People() 
         {
             List<PersonModel> people = new List<PersonModel>();
