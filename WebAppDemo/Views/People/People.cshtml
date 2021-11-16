@@ -5,10 +5,26 @@
 }
 
 <h1>People</h1>
-
-
-
-
+<br />
+<form asp-controller="People" asp-action="People" method="post">
+    <label>Search:</label>
+    <input type="number" name="PersonId" />
+    <input type="submit" value="Enter person ID" />
+</form>
+<br />
+<h4>Add person:</h4>
+<form asp-controller="People" asp-action="People" method="post">
+    <label>Person ID:</label>
+    <input type="number" name="CreatePersonViewModel" />
+    <label>Name:</label>
+    <input type="text" name="CreatePersonViewModel" />
+    <label>Phone Number:</label>
+    <input type="number" name="CreatePersonViewModel" />
+    <label>City:</label>
+    <input type="text" name="CreatePersonViewModel" />
+    <input type="submit" value="Create Person" />
+</form>
+<br />
 <!--AUTOGENERERADES MED MALLEN LIST
 <p>
     <a asp-action="Create">Create New</a>
