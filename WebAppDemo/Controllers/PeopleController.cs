@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebAppDemo.Models;
-using WebAppDemo.ViewModel;
+using WebAppDemo.ViewModels;
 
 namespace WebAppDemo.Controllers
 {
