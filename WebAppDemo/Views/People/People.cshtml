@@ -6,10 +6,13 @@
 
 <h1>People</h1>
 <br />
+<h4>Find person:</h4>
 <form asp-controller="People" asp-action="People" method="post">
-    <label>Search:</label>
-    <input type="number" name="PersonId" />
-    <input type="submit" value="Enter person ID" />
+    <label>Search by name:</label>
+    <input type="number" name="Name" />
+    <label>Search by city:</label>
+    <input type="number" name="City" />
+    <input type="submit" value="Enter Search" />
 </form>
 <br />
 <h4>Add person:</h4>
