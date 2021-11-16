@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebAppDemo.Models;
 
-namespace WebAppDemo.ViewModel
+namespace WebAppDemo.ViewModels
 {
     public class CreatePersonViewModel
     {
