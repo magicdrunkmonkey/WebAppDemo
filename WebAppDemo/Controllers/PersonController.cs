@@ -18,5 +18,10 @@ namespace WebAppDemo.Controllers
 
             return View();
         }
+        public IActionResult Persons()
+        {
+            PersonModel personModel = new PersonModel();
+            return View(personModel);
+        }
     }
 }
