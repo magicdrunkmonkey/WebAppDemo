@@ -44,6 +44,11 @@ namespace WebAppDemo
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}"
+                );
+
                 endpoints.MapControllerRoute(   //Måste ligga före default-route för att kunna hämta sida utan controllern
                    name: "fever",
                    pattern: "FeverCheck",
@@ -55,11 +60,7 @@ namespace WebAppDemo
                    pattern: "GuessingGame",
                    defaults: new { controller = "GuessingGame", action = "GuessNumber" }
                 );
-
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}"                    
-                ); 
+                 
 
                 /* Så som det stod innan ändring till MapControllerRoute()
                 endpoints.MapGet("/", async context =>

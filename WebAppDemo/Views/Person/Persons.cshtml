@@ -16,4 +16,14 @@
             <th>City</th>
         </tr>
     </thead>
+    <tbody>
+        @foreach (var item in PersonModel.listOfPersons)
+        {
+            <tr>
+                <td>@item.PersonName</td>
+                <td>@item.PersonPhoneNumber</td>
+                <td>@item.PersonCity</td>
+            </tr>
+        }
+    </tbody>
 </table>
