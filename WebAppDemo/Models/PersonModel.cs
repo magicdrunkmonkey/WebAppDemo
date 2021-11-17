@@ -22,4 +22,18 @@ namespace WebAppDemo.Models
         public int PhoneNumber { get; set; }
         public string City { get; set; }
     }
+
+    List<PersonModel> people = new List<PersonModel>();
+    foreach (PersonModel person in people)  
+        {  
+            If(people.indexof() == 0)
+            {
+                < ul >
+            }
+                <li> people[i].firstName )
+            if(people.indexof() == (people.length-1) )
+            {
+                </ul>
+            }
+        }  
 }

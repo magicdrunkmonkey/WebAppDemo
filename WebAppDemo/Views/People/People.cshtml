@@ -6,6 +6,32 @@
 
 <h1>People</h1>
 <br />
+
+<p>
+    <ul>
+        <li>people[0].firstName </li>
+        <li>people[0].phoneNumber </li>
+        <li>people[0].city </li>
+    </ul>
+    <ul>
+        <li>Console.WriteLine( people[1].firstName );</li>
+        <li>Console.WriteLine( people[1].phoneNumber );</li>
+        <li>Console.WriteLine( people[1].city );</li>
+    </ul>
+    <!--
+    <ul>
+        <li>Rustan</li>
+        <li>092-450089</li>
+        <li>Halmstad</li>
+    </ul>
+    <ul>
+        <li>Alfons</li>
+        <li>092-550089</li>
+        <li>Skövde</li>
+    </ul>-->
+</p>
+
+<br />
 <h4>Find person:</h4>
 <form asp-controller="People" asp-action="People" method="post">
     <label>Search by name:</label>
@@ -66,7 +92,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.City)
                 </td>
-                <td>                    
+                <td>
                     @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
                 </td>
             </tr>
