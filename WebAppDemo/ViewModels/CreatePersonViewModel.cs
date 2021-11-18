@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebAppDemo.ViewModel
+namespace WebAppDemo.ViewModels
 {
-    public class PeopleViewModel
+    public class CreatePersonViewModel
     {
     }
 }
